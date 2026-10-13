@@ -1,0 +1,17 @@
+name: Ejercicio-1
+
+on:
+  workflow_dispatch:
+
+env:
+  nombre: "Lolito"
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hola, soy $nombre"
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "¡¡¡Yepa!!! ¿Qué pasa gente? Yo soy $nombre"
