@@ -1,0 +1,16 @@
+name: Ejercicio-2
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job_secreto:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simular login
+        env:
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+        run: |
+          echo "Iniciando login..."
+          echo "login --pass $DB_PASSWORD"
+          echo "Login correcto"
